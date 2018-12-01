@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { PaintingsComponent } from './paintings/paintings.component';
+import { PaintingDetailComponent } from './paintings/painting-detail/painting-detail.component';
+import { PaintingListComponent } from './paintings/painting-list/painting-list.component';
+import { PaintingItemComponent } from './paintings/painting-list/painting-item/painting-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    PaintingsComponent,
+    PaintingDetailComponent,
+    PaintingListComponent,
+    PaintingItemComponent
   ],
   imports: [
     BrowserModule,
