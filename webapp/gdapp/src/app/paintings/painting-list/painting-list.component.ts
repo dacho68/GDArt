@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Painting } from '../painting.model';
 
 @Component({
   selector: 'app-painting-list',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaintingListComponent implements OnInit {
 
+  paintings: Painting = [
+    new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'aa')
+  ];
   constructor() { }
 
   ngOnInit() {
