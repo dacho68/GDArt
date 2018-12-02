@@ -8,8 +8,8 @@ import { Painting } from '../painting.model';
 })
 export class PaintingListComponent implements OnInit {
 
-  paintings: Painting = [
-    new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'aa')
+  paintings: Painting [
+   
   ];
   constructor() { }
 
