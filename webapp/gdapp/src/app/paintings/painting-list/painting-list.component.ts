@@ -7,10 +7,8 @@ import { Painting } from '../painting.model';
   styleUrls: ['./painting-list.component.less']
 })
 export class PaintingListComponent implements OnInit {
-
-  paintings: Painting = [
-    new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'aa')
-  ];
+ /*   new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'aa')*/
+  paintings: Painting [];
   constructor() { }
 
   ngOnInit() {
