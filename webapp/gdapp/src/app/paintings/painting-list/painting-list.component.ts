@@ -7,10 +7,15 @@ import { Painting } from '../painting.model';
   styleUrls: ['./painting-list.component.less']
 })
 export class PaintingListComponent implements OnInit {
+<<<<<<< HEAD
 
   paintings: Painting [
    
   ];
+=======
+ /*   new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'aa')*/
+  paintings: Painting [];
+>>>>>>> Signup
   constructor() { }
 
   ngOnInit() {
