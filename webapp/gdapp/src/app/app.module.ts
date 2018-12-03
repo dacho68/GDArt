@@ -11,7 +11,11 @@ import { PaintingListComponent } from './paintings/painting-list/painting-list.c
 import { PaintingItemComponent } from './paintings/painting-list/painting-item/painting-item.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
-
+import { AlertComponent } from './auth/alert/alert.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+/*
+import { JwtInterceptor, ErrorInterceptor } from './helpers';
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +25,20 @@ import { SignupComponent } from './auth/signup/signup.component';
     PaintingListComponent,
     PaintingItemComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    /*
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    */
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
