@@ -1,10 +1,42 @@
-# Gdapp
+# GDArt
+There are 2 parts in this applicaiton.
+- Front End .\WebApplication\ClientApp
+- Back End .\WebApplication\Controllers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+## Front End Development
 
-## Development server
+This ClientApp project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.dir
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- I recommend using Studio Code for editing ClientApp.
+```
+GDArt\WebApplication\ClientApp\code .
+```
+
+- Install Angular/CLI globaly
+```
+>npm install -g @angular/cli@latest
+```
+- Install other packages
+```
+>npm install
+```
+
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+>ng serve
+```
+
+You could debug with Angular directly in code. Select Debug>Start Debuging. You must run code in GDArt\WebApplication\ClientApp
+
+## Running from VS 2017 (15.9.4)
+you could run directly from VS 2107 
+
+## Deloy in Azure
+
+Current I'm using VS2017 (GDArt.sln) and manually publish 
+
+https://gdart.azurewebsites.net/#
+
 
 ## Code scaffolding
 
@@ -26,12 +58,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Development
 
-- Install Angular/CLI globaly
-```
->npm install -g @angular/cli@latest
-```
 
 ## Using Studio Code
 

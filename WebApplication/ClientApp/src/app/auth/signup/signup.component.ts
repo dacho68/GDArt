@@ -11,6 +11,7 @@ import { AlertService } from '../../services/alert.service';
   styleUrls: ['./signup.component.less']
 })
 export class SignupComponent implements OnInit {
+
   signupForm: FormGroup;
   loading = false;
   submitted = false;
