@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+import { AuthenticationService } from '../../services/authentication.service';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,16 +11,20 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./signup.component.less']
 })
 export class SignupComponent implements OnInit {
-
+  signupForm: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl: string;
   constructor() { }
+
+      // convenience getter for easy access to form fields
+  get f() { return this.signupForm.controls; }
 
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) {
-      const email = form.value.email;
-      const password = form.value.password;
-      console.log(email);
+  onSubmit() {
+
   }
 
 }
