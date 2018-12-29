@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Painting } from '../painting.model';
+import { PaintingsService } from '../../services/paintings.service';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Painting } from '../../models/painting.model';
 
 @Component({
   selector: 'app-painting-list',
@@ -8,12 +9,19 @@ import { Painting } from '../painting.model';
 })
 
 export class PaintingListComponent implements OnInit {
+  @Output() paintingWasSelected = new EventEmitter<Painting>();
   paintings: Painting [];
-  constructor() { }
 
-  ngOnInit() {
-    const wPaint =  new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'abc');
-    this.paintings.push(wPaint);
+  constructor(private paintingService: PaintingsService) {
   }
 
+  ngOnInit() {
+   // const wPaint =  new Painting('Guernica', 'Picasso', '12323', 'http://www.bhiec.com.au/aaart_esl/aaresponse/guernica.jpg', 'abc');
+   // this.paintings.push(wPaint);
+    this.paintings = this.paintingService.getPaintings();
+  }
+
+  onPaintingSelected(painting: Painting) {
+    this.paintingWasSelected.emit(painting);
+  }
 }

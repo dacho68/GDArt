@@ -1,2 +1,4 @@
 .vs/GDArt/v15/Server/sqlite3/storage.ide-wal
 .vs/GDArt/v15/Server/sqlite3/db.lock
+.vs/GDArt/v15/.suo
+WebApplication/ClientApp/src/app/services/paintings.service.ts
