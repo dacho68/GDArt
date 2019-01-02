@@ -70,4 +70,4 @@ Just opent he solution GDArt.sln
 
 ## References
 http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
-
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-upload-process-images?tabs=dotnet

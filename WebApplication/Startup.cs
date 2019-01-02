@@ -11,8 +11,18 @@ namespace WebApplication
   public class Startup
   {
     public Startup(IConfiguration configuration)
+   // public Startup(IHostingEnvironment env)
     {
-      Configuration = configuration;
+       Configuration = configuration;
+
+      //var basePath = env.ContentRootPath;
+      //var builder = new ConfigurationBuilder()
+      //  .SetBasePath(basePath)
+      //  .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+      //  .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: false)
+      //  .AddEnvironmentVariables();
+      //Configuration = builder.Build();
+      var wenvStr = Configuration["ApplicationSettings:Environment"];
     }
 
     public IConfiguration Configuration { get; }
@@ -20,6 +30,7 @@ namespace WebApplication
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.Configure<AppSettings>(Configuration.GetSection("ApplicationSettings"));
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
       // In production, the Angular files will be served from this directory
